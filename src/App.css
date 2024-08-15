@@ -1,45 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-.main{
+
+.main {
   font-family: "Poppins", sans-serif;
-  user-select:none;
-}
-/*========header=========*/
-#logo{
-  width:5%;
-}
-/*========modal=========*/
-.ReactModal__Content{
-  padding:0 !important;
-  width:50%;
-  margin:auto;
-  animation:popup 0.2s linear forwards;
-}
-@keyframes popup {
-  from{
-    transform:scale(0.5);
-  }
-  to{
-    transform:scale(1);
-  }
-}
-/*========quiz=========*/
-.quiz{
-/*   background:linear-gradient(29deg, rgba(95,231,247,1) 41%, rgba(114,240,236,1) 56%) !important;*/
-}
-.correct{
-  background:lightgreen;
-}
-.wrong{
-  background:#ff000061;
+  user-select: none;
 }
 
+/*========header=========*/
+#logo {
+  width: 5%;
+}
+
+/*========modal=========*/
+.ReactModal__Content {
+  padding: 0 !important;
+  width: 50%;
+  margin: auto;
+  animation: popup 0.2s linear forwards;
+
+  input,
+  select,
+  button {
+    font-family: "Poppins", sans-serif;
+  }
+
+}
+
+@keyframes popup {
+  from {
+    transform: scale(0.5);
+  }
+
+  to {
+    transform: scale(1);
+  }
+
+}
+
+/*========quiz=========*/
+.correct {
+  background: lightgreen;
+}
+
+.wrong {
+  background: #ff000061;
+}
 
 /*========responsive=========*/
-@media screen and (max-width : 780px) {
-  .ReactModal__Content{
-  width:80%;
+@media screen and (max-width:780px) {
+  .ReactModal__Content {
+    width: 80%;
   }
-  #logo{
-  width:10%;
-}
+
+  #logo {
+    width: 10%;
+  }
+
 }

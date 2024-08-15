@@ -16,6 +16,7 @@ function MyComponent() {
     setIsOpen(false);
   };
 
+// =========User option function===========
   const userData=(e)=>{
     e.preventDefault();
     closeModal();
@@ -25,29 +26,36 @@ function MyComponent() {
       number:number.current.value,
       category:category.current.value,
     })
-
   }
+
   return (
     <>
     <div>
       <Modal isOpen={isOpen} onRequestClose={closeModal}>
-      <h1 className='text-xl bg-slate-900 p-3 text-white mb-12 text-center'>SELECT YOUR TOPIC</h1>
+      <h1 className='text-xl bg-slate-900 p-3 text-white mb-6 text-center'>SELECT YOUR TOPIC</h1>
       <form onSubmit={userData} className='p-5'>
         <div className='flex flex-col'>
           <p className=''>YOUR NAME</p>
-            <input type="text" ref={name} required className='border border-black p-2 rounded'/>
+            <input type="text" ref={name} required className='border border-black p-2'/>
         </div>
         <div className='flex flex-col mt-5'>
           <p className=''>CATEGORY</p>
-            <select className='border border-black p-2 rounded' required ref={category}>
+            <select className='border border-black p-2 bg-white' required ref={category}>
               <option value="computers">Computers</option>
               <option value="sports">Sports</option>
               <option value="film">Film</option>
+              <option value="gk">GK</option>
+              <option value="music">Music</option>
+              <option value="games">Games</option>
+              <option value="mythology">Mythology</option>
+              <option value="history">History</option>
+              <option value="art">Art</option>
+              <option value="gadget">Gadgets</option>
             </select>
         </div>
         <div className='flex flex-col mt-5'>
           <p className=''>DIFFICULTY</p>
-            <select className='border border-black p-2 rounded' required ref={difficulty}>
+            <select className='border border-black p-2 bg-white' required ref={difficulty}>
               <option value="easy">Easy</option>
               <option value="medium">Medium</option>
               <option value="hard">Hard</option>
@@ -55,17 +63,16 @@ function MyComponent() {
         </div>
         <div className='flex flex-col mt-5'>
           <p className=''>NO. OF QUESTIONS</p>
-            <select className='border border-black p-2 rounded' required ref={number}>
+            <select className='border border-black p-2 bg-white' required ref={number}>
               <option value="10">10</option>
               <option value="15">15</option>
               <option value="20">20</option>
             </select>
         </div>
         <div className="text-center">
-        <button type='submit' className='p-2 border-black border mt-12 duration-200 hover:bg-slate-900 hover:text-white'>QUICK START</button>
+        <button type='submit' className='p-2 border-black border rounded mt-6 duration-200 hover:bg-slate-900 hover:text-white'>QUICK START</button>
         </div>
         </form>
-        
       </Modal>
     </div>
     {
